@@ -1,5 +1,5 @@
 fun main(){
-val celular = Fatura(0,"um celular",5,225.0)
+    val celular = Fatura(0,"um celular",5,225.0)
     celular.getDesc()
     celular.getQtd()
     celular.getNItem()
