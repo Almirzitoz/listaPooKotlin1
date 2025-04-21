@@ -1,5 +1,22 @@
 fun main(){
+val celular = Fatura(0,"um celular",5,225.0)
+    celular.getDesc()
+    celular.getQtd()
+    celular.getNItem()
+    celular.getValor()
+    celular.getValorFatura()
 
+    celular.setDesconto(33.0)
+    celular.getValorFatura()
+
+    val exemplo = Fatura(1,"sla",-5,-2.0)
+    exemplo.getQtd()
+    exemplo.getValor()
+
+    exemplo.setQtd(6)
+    exemplo.setvalor(22.0)
+    exemplo.getQtd()
+    exemplo.getValor()
 }
 
 class Fatura(var nItem:Int,var desc:String,var qtd:Int,var valor:Double){
