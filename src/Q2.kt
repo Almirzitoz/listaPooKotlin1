@@ -42,9 +42,9 @@ class Produtos(var nome:String,var valor:Double,var qtd:Int){
         println("Valor: $valor")
         println("Quantidade: $qtd")
         if (vendido == false){
-            println("Situação: Vendido")
-        }else{
             println("Situação: A venda")
+        }else{
+            println("Situação: Vendido")
         }
         println("Valor a ser pago pelo produto: ${valor-desconto}")
     }
