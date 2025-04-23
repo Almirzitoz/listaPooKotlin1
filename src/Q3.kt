@@ -25,6 +25,8 @@ class Vip(val valorVip:Double,val quantidadeVip:Int,val valorExtra:Double):Ingre
 class Evento(){
     var listaIngressos = mutableListOf<Int>()
     var listaVipIngressos = mutableListOf<Int>()
+    var listaVendidos = mutableListOf<Int>()
+    var listaVendidosVip = mutableListOf<Int>()
     var vendidos = 0
     var vendidosVip = 0
     var valorArrecadado = 0.0
@@ -44,16 +46,22 @@ class Evento(){
 
     fun mostrarIngressos(){
         println("Ingressos: $listaIngressos")
+        println("Vendidos: $listaVendidos")
         println("Ingressos vip: $listaVipIngressos")
+        println("Vendidos: $listaVendidosVip")
     }
 
     fun venderIngresso(index: Int){
+        var codigoVendido = 404
         this.vendidos +=1
-        listaIngressos.removeAt(index)
+        listaVendidos.add(listaIngressos[index])
+        listaIngressos[index] = codigoVendido
     }
     fun venderVip(index: Int){
+        var codigoVendido = 404
         this.vendidosVip+=1
-        listaVipIngressos.removeAt(index)
+        listaVendidosVip.add(listaVipIngressos[index])
+        listaVipIngressos[index]=codigoVendido
     }
 
     fun verArrecadacao(){
